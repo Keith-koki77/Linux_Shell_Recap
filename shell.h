@@ -10,3 +10,13 @@
 #include <sys/stst.h>
 #include <sys/wait.h>
 
+#define MAX_COMMAND_LENGTH 1024
+
+/************** FUNCTION PROTOTYPE *****************/
+void prompt(void);
+char *read_line(void);
+char **parse_input(char *input);
+int execute_command(char **args);
+void free_args(char **args);
+
+#endif
