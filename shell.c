@@ -24,3 +24,26 @@ char *read_line(void)
 	
 	return (line);
 }
+
+/**
+ * parse_input - function that traverses the arguments
+ * @input: pointer to character type
+ *
+ * Return: the arguments
+ */
+char **parse_input(char *input)
+{
+	char **args = malloc(64 * sizeof(char *));
+	char *token;
+	int i = 0;
+
+	token = strtok(input, " \n");
+
+	while(token != NULL)
+	{
+		args[i++] = _strdup(token);
+		token = strtok(NULL, " \n");
+	}
+	args[i] = NULL;
+	return (args);
+}
