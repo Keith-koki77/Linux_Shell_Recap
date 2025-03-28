@@ -23,4 +23,8 @@ void free_args(char **args);
 void shell_exit(void);
 void shell_env(void);
 
+/****************** UTILITY FUNCTIONS ****************/
+char *_strdup(const char *str);
+int _strcmp(const char *s1, const char *s2);
+
 #endif
